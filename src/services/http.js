@@ -11,14 +11,16 @@ axios.interceptors.response.use(null, (error) => {
     toast.error("An unexpected error occured.");
   }
 
+  console.error(error);
+
   return Promise.reject(error);
 });
 
-const exportVar = {
+const http = {
   get: axios.get,
   post: axios.post,
   put: axios.put,
   delete: axios.delete,
 };
 
-export default exportVar;
+export default http;
