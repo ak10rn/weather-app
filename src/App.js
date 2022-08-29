@@ -10,8 +10,8 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/weather-app" element={<Home />} />
-        <Route path="/weather-app/location/:hash" element={<City />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/location/:hash" element={<City />} />
       </Routes>
     </Router>
   );

@@ -6,6 +6,7 @@ import TodaysWeather from "../components/TodaysWeather";
 import HourlyWeather from "../components//HourlyWeather";
 import WeeklyWeather from "../components//WeeklyWeather";
 import SearchBox from "../components/SearchBox";
+import LoadingPage from "../components/LoadingPage";
 
 import { getWeather } from "../services";
 
@@ -49,7 +50,7 @@ export default function City() {
   const loading =
     !city || !data || !timezone || !weeklyWeather || !hourlyWeather;
 
-  if (loading) return null;
+  if (loading) return <LoadingPage />;
 
   return (
     <div className="page-wrapper">

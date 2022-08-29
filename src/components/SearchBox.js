@@ -37,7 +37,7 @@ export default function SearchBox({ placeholder }) {
       country,
       coord,
     };
-    navigate(`/weather-app/location/${window.btoa(JSON.stringify(params))}`);
+    navigate(`/location/${window.btoa(JSON.stringify(params))}`);
     setQuery(name);
     setShowResults(false);
   };
